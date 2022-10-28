@@ -1,0 +1,114 @@
+---
+title: "RWorksheet2-Sim"
+output: pdf_document
+date: "2022-10-06"
+---
+
+```
+install.packages("rmarkdown")
+install.packages("tinytex")
+install.packages("devtools")
+
+#1a
+seq <-c(-5:5)
+seq
+#It displays the negative and positive numbers, then it displays the 0 between the negative and positive numbers
+
+#1b
+x <- 1:7
+x
+
+#2
+seq(1, 3)
+seq(1, 3, 0.2)
+
+#3
+workers <- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 43, 53, 41, 51, 35,
+             24,33, 41, 53, 40, 18, 44, 38, 41, 48, 27, 39, 19, 30, 61, 54, 58, 26, 18)
+workers
+workers[3]
+
+#3b
+workers [2]
+workers [3]
+
+#3C
+workers [2:50]
+
+#4
+x <- c("first"=3, "second"=0, "third"=9)
+x
+
+#4a
+x[c("first", "third")] #The output displays only the "first" and "third" variables using array
+
+#4b
+x <- c("first"=3, "second"=0, "third"=9)
+x 
+
+x[c("first", "third")]
+
+#5a
+x <-(-3:2)
+x
+
+x[2]<-0
+x
+
+#6a
+Month <- c("Jan", "Feb", "March", "Apr", "May", "June")
+Price_per_liter_php <- c(52.50, 57.25, 60.00, 65.00, 74.25, 54.00)
+Purchase_quantity_liter <- c(25, 30, 40, 50, 10, 45)  
+
+data_frame <- data.frame(Month, Price_per_liter_php, Purchase_quantity_liter )
+data_frame
+
+#6b
+weighted.mean(Price_per_liter_php, Purchase_quantity_liter)
+
+#7
+data <- c(length(rivers), sum(rivers), mean(rivers), median(rivers), var(rivers),
+          sd(rivers), min(rivers), max(rivers))
+data
+
+#8
+PowerRanking <- 1:25
+CelebrityName <- c("Tom Cruise", "Rolling Stones", "Oprah Winfrey", "U2", 
+                   "Tiger Woods", "Steven Spielberg", "Howard Stern", "50 Cent", "Cast of the sopranos",
+                   "Dan Brown", "Bruce Springsteen", "Donald Trump", "Muhammad Ali", "Paul McCartney",
+                   "George Lucas", "Elton John", "David Letterman", "Phil Mickelson", "J.K Rowling",
+                   "Bradd Pitt", "Peter Jackson", "Dr. Phil McGraw", "Jay Lenon", "Celine Dion", "Kobe Bryant")
+Pay <- c(67, 90, 225, 110, 90, 332, 302, 41, 52, 88, 55, 44, 55, 40,
+         233, 34, 40, 47, 75, 25, 39, 45, 32, 40, 31)
+
+Data_Ranking <- data.frame(PowerRanking, CelebrityName, Pay)
+Data_Ranking
+
+PowerRanking [19] <- 15
+PowerRanking
+Pay [19] <- 90
+Pay
+
+Magazine_Ranking <- data.frame(PowerRanking, CelebrityName, Pay)
+Magazine_Ranking
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
